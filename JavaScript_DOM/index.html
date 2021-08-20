@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to blogs</h1>
+        <h3>Blog List</h3>
+        <ul id="blog-list">
+            <li>Blog-1</li>
+            <li>Blog-2</li>
+            <li>Blog-3</li>
+            <li>Blog-4</li>
+        </ul>
+    </header>
+    <main>
+        <section id="blogs-container">
+            <article id="blog">
+                <h3>Blog-1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dicta itaque enim inventore
+                    quibusdam illo, laudantium saepe! Adipisci, debitis libero accusamus inventore nemo nostrum eveniet
+                    est alias, aliquam repudiandae error.</p>
+            </article>
+            <article id="secondArticle">
+                <h3>Blog-2</h3>
+                <p id="paragraph">Minus ipsa deserunt eum nesciunt beatae, maiores dolores consequatur vel nam,
+                    vitae
+                    animi natus.
+                    Facere ullam minus, quisquam ducimus a libero numquam cum quaerat asperiores amet quia adipisci
+                    perspiciatis voluptate.</p>
+            </article>
+            <article>
+                <h3>Blog-3</h3>
+                <p>Assumenda temporibus similique impedit dolorem, aut et sint quo tempore! Harum animi quos possimus
+                    neque dolores quo, officia tempora atque, corrupti eligendi sint fugit earum eius repellat
+                    reprehenderit velit? Molestias?</p>
+            </article>
+            <article>
+                <h3>Blog-4</h3>
+                <p>laravel temporibus similique impedit dolorem, aut et sint quo tempore! Harum animi quos possimus
+                    neque dolores quo, officia tempora atque, corrupti eligendi sint fugit earum eius repellat
+                    reprehenderit velit? Molestias?</p>
+            </article>
+        </section>
+    </main>
+    <script>
+        const student = { name: "najmul", age: 23, phone: 8801679704843 };
+        document.getElementById('secondArticle').style.backgroundColor = 'aqua';
+        document.getElementById('secondArticle').style.border = '10px solid magenta';
+        document.body.style.fontSize = '10px';
+        const blogHeadings = document.getElementsByTagName('h3');
+        const blogParagraphs = document.getElementsByTagName('p');
+        document.getElementById('blogs-container').style.display = 'flex';
+        document.getElementById('blog').style.backgroundColor = 'green';
+        for (const h3 of blogHeadings) {
+            h3.style.textAlign = 'center';
+            h3.style.fontSize = '30px';
+            h3.style.fontWeight = 'bold';
+        }
+        for (const p of blogParagraphs) {
+            p.style.fontSize = '3em';
+            p.style.fontWeight = '100';
+            p.style.textAlign = 'justify';
+            p.style.padding = '20px';
+        }
+        const para = document.querySelectorAll('p');
+        para[3].style.border = '10px solid brown';
+        const blog = document.querySelectorAll('article');
+        blog[3].style.border = '10px solid blue';
+        const x = document.getElementById('paragraph');
+        console.log(x.getAttribute('style'));
+        x.setAttribute('title', 'this is title');
+        // console.log(x.parentNode.parentNode.parentNode);
+        console.log(document.getElementById('secondArticle').children)
+        const bodyTag = document.getElementsByTagName('body');
+        for (const iterator of bodyTag) {
+            iterator.style.fontSize = '20px';
+        }
+
+        //create and add element using js
+        //create element
+        //where to add
+        const li = document.createElement('li');
+        li.innerText = 'Blog-5 js';
+        const ul = document.getElementById('blog-list');
+        ul.appendChild(li);
+        //adding a new article
+        const article = document.createElement('article');
+        const h3 = document.createElement('h3');
+        const p = document.createElement('p');
+        h3.innerText = 'Blog using js';
+        p.innerText = 'Minus ipsa deserunt eum nesciunt beatae, maiores dolores consequatur vel nam, vitae animi natus. Facere ullam minus, quisquam ducimus a libero numquam cum quaerat asperiores amet quia adipisciperspiciatis voluptate.';
+        article.appendChild(h3);
+        article.appendChild(p);
+        document.getElementById('blogs-container').appendChild(article);
+        // document.getElementsByTagName('article');
+        for (const iterator of document.getElementsByTagName('article')) {
+            iterator.style.backgroundColor = 'lime';
+        }
+        //adding a class name 
+        article.classList.add('class_by_js')
+        //another way
+        article.innerHTML = `
+        <h4> This is another heading </h4>
+        `;
+        document.getElementById('blogs-container').appendChild(article);
+    </script>
+</body>
+
+</html>

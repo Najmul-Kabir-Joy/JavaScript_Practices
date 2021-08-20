@@ -1,0 +1,16 @@
+// var a = 10;
+// var b = 20;
+// var sum = a + b;
+// console.log(sum);
+// var firstName = "Najmul";
+// var lastName = "Kabir";
+// var gap = " ";
+// var fullName = firstName + gap + lastName;
+// console.log(fullName);
+// console.log(typeof (fullName));
+// var z = null;
+// console.log(typeof (z));
+// var firstNumber = 100;
+// var secondNumber = 3;
+// var total = parseFloat((firstNumber / secondNumber).toFixed(1));
+// console.log(total);
