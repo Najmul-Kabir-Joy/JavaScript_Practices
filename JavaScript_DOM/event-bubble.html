@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENT BUBBLE</title>
+</head>
+
+<body>
+    <main>
+        <section id="article-container">
+            <article class="article">
+                <h1 class="article-header">heading 1</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, laborum.</p>
+            </article>
+            <article class="article">
+                <h1 class="article-header">heading 2</h1>
+                <p>Voluptas architecto iste distinctio voluptates ex exercitationem impedit. At, debitis?</p>
+            </article>
+            <article class="article">
+                <h1 class="article-header">heading 3</h1>
+                <p>Mollitia, quia? Maxime omnis impedit nostrum corrupti ipsum, placeat ipsam.</p>
+            </article>
+            <article class="article">
+                <h1 class="article-header">heading 4</h1>
+                <p>Vel consequuntur maiores nam ipsum ea quo veritatis minus ratione.</p>
+            </article>
+        </section>
+        <button id="add-article">Add Article</button>
+    </main>
+
+    <script>
+        document.getElementById('add-article').addEventListener('click', function () {
+            const articleContainer = document.getElementById('article-container');
+            const newArticle = document.createElement('article');
+            newArticle.classList.add('article')
+            articleContainer.appendChild(newArticle);
+            newArticle.innerHTML = `
+            <h1 class="article-header">heading new</h1>
+                <p>Vel consequuntur maiores nam ipsum ea quo veritatis minus ratione.</p>
+            `;
+        })
+        document.getElementById('article-container').addEventListener('click', function (event) {
+            if (event.target.tagName.toLowerCase() == 'article') {
+                event.target.style.backgroundColor = 'red';
+            }
+        })
+    </script>
+</body>
+
+</html>
