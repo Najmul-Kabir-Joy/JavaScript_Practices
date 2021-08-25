@@ -43,8 +43,12 @@
             `;
         })
         document.getElementById('article-container').addEventListener('click', function (event) {
+            //console.log(event.target.parentNode.tagName.toLowerCase());
             if (event.target.tagName.toLowerCase() == 'article') {
                 event.target.style.backgroundColor = 'red';
+                //else block not working
+            } else {
+                event.target.parentNode.style.backgroundColor == 'purple';
             }
         })
     </script>
