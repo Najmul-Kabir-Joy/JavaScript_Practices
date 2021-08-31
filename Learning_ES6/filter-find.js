@@ -131,4 +131,6 @@ const items = [
 ];
 
 const foods = items.filter(x => x.type == 'food');
+const foods2 = items.find(x => x.type == 'food');
 console.log(foods);
+console.log(foods2);
