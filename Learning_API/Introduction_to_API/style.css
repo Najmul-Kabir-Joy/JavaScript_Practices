@@ -1,0 +1,11 @@
+.each_post{
+    background-color: lightsalmon;
+    border:  2px solid salmon;
+    border-radius: 2em;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.post_header{
+    color: rebeccapurple;
+}
